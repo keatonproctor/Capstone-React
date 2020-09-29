@@ -1,10 +1,15 @@
 import React from 'react';
 import './App.css';
+import Form from './Components/Form';
+import TaskList from './Components/TaskList';
 
 function App() {
   return (
     <div className="App">
-      <h1>You have begun...</h1>
+      <header>My Task List</header>
+
+      <Form />
+      <TaskList />
     </div>
   );
 }
