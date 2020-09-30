@@ -1,15 +1,23 @@
 import React from 'react';
 
-const Form = ({ setInputText }) => {
+const Form = ({ setInputText, tasks, setTasks, inputText }) => {
     const inputTextHandler = (e) => {
         console.log(e.target.value);
         setInputText(e.target.value);
     };
+
+    const submitTaskHandler = (e) => {
+        e.preventDefault();
+        setTasks([
+            ...tasks, { text: inputText, completed:false, id: Math.random() * 1000 }
+        ]);
+        setInputText("");
+    };
     return(
         <form>
-            <input onChange={inputTextHandler} type="text" className="task-input" />
+            <input value={inputText} onChange={inputTextHandler} type="text" className="task-input" />
 
-            <button className="task-button" type="submit">
+            <button onClick={submitTaskHandler} className="task-button" type="submit">
                 <i className="far fa-plus-square"></i>
             </button>
 
