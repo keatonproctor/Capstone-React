@@ -18,7 +18,7 @@ function App() {
       setInputText={setInputText} 
       />
 
-      <TaskList />
+      <TaskList tasks={tasks} />
     </div>
   );
 }
