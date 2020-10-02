@@ -136,6 +136,7 @@ select{
 }
 
 
+
 /* Animations */
 .swipe-left {
     animation: swipe-left-animation 1.8s cubic-bezier(.07,.68,.33,.98);
