@@ -82,10 +82,24 @@ font-size: 1rem;
 
 .complete-btn {
     background: rgb(30, 252, 30);
+    transition: all 0.5s ease;
+}
+
+.complete-btn:hover {
+    background: whitesmoke;
+    color: #00c424;
+    transition: all 0.6s ease;
 }
 
 .trash-btn {
     background: rgb(240, 54, 54);
+    transition: all 0.6s ease;
+}
+
+.trash-btn:hover {
+    background: whitesmoke;
+    color: rgb(240, 54, 54);
+    transition: all 0.6s ease;
 }
 
 .task-item {
@@ -95,6 +109,14 @@ font-size: 1rem;
 .fa-check-square, .fa-trash-alt {
     pointer-events: none;
 }
+
+.completed {
+    text-decoration: line-through green;
+}
+
+/* .uncompleted {
+    text-decoration: red;
+} */
 
 select{
     -webkit-appearance: none;

@@ -1,17 +1,17 @@
 import React from 'react';
 import Task  from './Task';
 
-const TaskList = ({ tasks, setTasks }) => {
+const TaskList = ({ tasks, setTasks, filteredTasks }) => {
     return(
         <div className="task-container">
             <ul className="task-list">
-                {tasks.map(task => (
+                {filteredTasks.map((task) => (
                     <Task 
-                        key={task.id}
                         setTasks={setTasks}
                         tasks={tasks}
+                        key={task.id}
                         task={task}
-                        text={task.text} 
+                        text={task.text}
                     />
                 ))}
             </ul>

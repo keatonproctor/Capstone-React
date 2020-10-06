@@ -12,7 +12,7 @@ const Task = ({ text, task, tasks, setTasks }) => {
                 return{
                     ...item, completed: !item.completed
                 }
-            }
+            }            
             return item;
         }))
     }
