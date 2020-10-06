@@ -10,23 +10,23 @@ function App() {
   const [filteredTasks, setFilteredTasks] = useState([]);
 
   useEffect(() => {
+    const filterHandler = () => {
+      switch(status) {
+        case 'completed':
+          setFilteredTasks(tasks.filter((task) => task.completed === true));
+          break;
+        case 'uncompleted':
+          setFilteredTasks(tasks.filter((task) => task.completed === false));
+          break;
+          
+        default:
+          setFilteredTasks(tasks);
+          break;
+      }
+    };
+    
     filterHandler();
   }, [tasks, status]);
-
-  const filterHandler = () => {
-    switch(status) {
-      case 'completed':
-        setFilteredTasks(tasks.filter(task => task.completed === true));
-        break;
-      case 'uncompleted':
-        setFilteredTasks(tasks.filter(task => task.completed === false));
-        break;
-        
-      default:
-        setFilteredTasks(tasks);
-        break;
-    }
-  }
 
   return (
     <div className="App">
