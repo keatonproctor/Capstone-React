@@ -157,7 +157,13 @@ select{
     color: #000080;
 }
 
-
+.addEventButton {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: white;
+}
 
 /* Animations */
 .swipe-left {
