@@ -31,7 +31,7 @@ const Form = ({ setInputText, tasks, setTasks, inputText, setStatus }) => {
                     <option value="uncompleted" className="uncompleted-tasks">Uncompleted</option>
                 </select>
             </div>
-
+            
         </form>
     );
 }
