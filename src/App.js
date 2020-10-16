@@ -10,14 +10,11 @@ function App() {
   const [filteredTasks, setFilteredTasks] = useState([]);
 
   var gapi = window.gapi
-  var CLIENT_ID = "831076834116-l2u8v917pgk0lehmumj0qfcldvfoebd8.apps.googleusercontent.com";
-  var API_KEY = "AIzaSyDUBBgjpjKYmvZR2F7gIGByPQ1W3PPZpeo";
-  var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
-  var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
-
+  
   useEffect(() => {
     getLocalTasks()
   }, []);
+
   useEffect(() => {
     const filterHandler = () => {
       switch(status) {
@@ -38,6 +35,11 @@ function App() {
     saveLocalTasks();
   }, [tasks, status]);
 
+  // API
+  var CLIENT_ID = "552207514135-fhgjrv0qkn8tg8edvgcmffti2kumtt7p.apps.googleusercontent.com"
+  var API_KEY = "AIzaSyBGcamts2osYcp-OjmBtVUZDSO9ZLI51mI"
+  var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
+  var SCOPES = "https://www.googleapis.com/auth/calendar.events"
 
   const handleClick = () => {
     gapi.load('client:auth2', () => {
@@ -93,6 +95,23 @@ function App() {
           window.open(event.htmlLink)
         })
 
+        /*
+            Uncomment the following block to get events
+        */
+        /*
+        // get events
+        gapi.client.calendar.events.list({
+          'calendarId': 'primary',
+          'timeMin': (new Date()).toISOString(),
+          'showDeleted': false,
+          'singleEvents': true,
+          'maxResults': 10,
+          'orderBy': 'startTime'
+        }).then(response => {
+          const events = response.result.items
+          console.log('EVENTS: ', events)
+        })
+        */
       })
     })
   }
