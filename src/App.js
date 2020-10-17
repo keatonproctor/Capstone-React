@@ -150,7 +150,11 @@ function App() {
       tasks={tasks}
       />
 
-      <button onClick={handleClick} className="addEvent">Add Event</button>
+      <div className="event-wrapper">
+        <div className="addEvent">
+        <button className="event-btn" onClick={handleClick}>Add Event</button>
+        </div>
+      </div>
     </div>
   );
 }

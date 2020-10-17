@@ -164,26 +164,40 @@ select{
     color: #000080;
 }
 
-.addEvent {
+/* Event Button */
+.event-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 2rem;
+}
+.event-btn {
+    outline:0; 
+    font-size:1em;
+    font-weight:525;
+    background: whitesmoke;
+    border:none;
     border-radius: 5px;
-    border: none;
-    background: white;
-    transition: all 0.5s ease;
-    cursor: pointer;
-}
+    padding: 0.75rem 2rem;
+    transition:all .4s ease-out; 
+    box-shadow:inset -3px -3px 0 0 lightgreen;
+  }
+.event-btn:hover{
+    color:#444;
+    background-color: lightgreen;
+    cursor: pointer; 
+  }
+.event-btn:active{
+    color:#222;
+    box-shadow:inset -5px -5px lightgreen,
+      1px 1px 0 0 lightgreen,
+      2px 2px 0 0 lightgreen,
+      3px 3px 0 0 lightgreen,
+      4px 4px 0 0 lightgreen,
+      5px 5px 0 0 lightgreen;
+  }
 
-.addEventButton:hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(30, 252, 30);
-    transition: all 0.5s ease;
-}
+
+
 
 /* Animations */
 .swipe-left {
