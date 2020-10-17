@@ -98,8 +98,7 @@ function App() {
         /*
             Uncomment the following block to get events
         */
-        /*
-        // get events
+        
         gapi.client.calendar.events.list({
           'calendarId': 'primary',
           'timeMin': (new Date()).toISOString(),
@@ -111,7 +110,7 @@ function App() {
           const events = response.result.items
           console.log('EVENTS: ', events)
         })
-        */
+        
       })
     })
   }
