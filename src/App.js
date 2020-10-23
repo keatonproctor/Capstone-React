@@ -36,8 +36,8 @@ function App() {
   }, [tasks, status]);
 
   // API
-  var CLIENT_ID = "552207514135-fhgjrv0qkn8tg8edvgcmffti2kumtt7p.apps.googleusercontent.com"
-  var API_KEY = "AIzaSyBGcamts2osYcp-OjmBtVUZDSO9ZLI51mI"
+  var CLIENT_ID = "142624838575-ba60ci3fj5vn8joessj4rej23jfok0le.apps.googleusercontent.com"
+  var API_KEY = "AIzaSyCU_3_cOwn5ySoJPCBNwIllv1PM8t8Tm70"
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
   var SCOPES = "https://www.googleapis.com/auth/calendar.events"
 
