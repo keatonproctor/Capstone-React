@@ -9,8 +9,10 @@ function App() {
   const [status, setStatus] = useState('all');
   const [filteredTasks, setFilteredTasks] = useState([]);
 
+  // API Info
   var gapi = window.gapi
-  
+  //
+
   useEffect(() => {
     getLocalTasks()
   }, []);
@@ -35,7 +37,7 @@ function App() {
     saveLocalTasks();
   }, [tasks, status]);
 
-  // API
+  // API Info
   var CLIENT_ID = "142624838575-ba60ci3fj5vn8joessj4rej23jfok0le.apps.googleusercontent.com"
   var API_KEY = "AIzaSyCU_3_cOwn5ySoJPCBNwIllv1PM8t8Tm70"
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
@@ -58,9 +60,9 @@ function App() {
       .then(() => {
         
         var event = {
-          'summary': 'Awesome Event!',
-          'location': '800 Howard St., San Francisco, CA 94103',
-          'description': 'Really great refreshments',
+          'summary': 'Title',
+          'location': 'Location',
+          'description': 'Description',
           'start': {
             'dateTime': '2020-06-28T09:00:00-07:00',
             'timeZone': 'America/Los_Angeles'
@@ -69,13 +71,6 @@ function App() {
             'dateTime': '2020-06-28T17:00:00-07:00',
             'timeZone': 'America/Los_Angeles'
           },
-          'recurrence': [
-            'RRULE:FREQ=DAILY;COUNT=2'
-          ],
-          'attendees': [
-            {'email': 'lpage@example.com'},
-            {'email': 'sbrin@example.com'}
-          ],
           'reminders': {
             'useDefault': false,
             'overrides': [
@@ -94,11 +89,8 @@ function App() {
           console.log(event)
           window.open(event.htmlLink)
         })
-
-        /*
-            Uncomment the following block to get events
-        */
         
+        // Get API Events
         gapi.client.calendar.events.list({
           'calendarId': 'primary',
           'timeMin': (new Date()).toISOString(),
@@ -110,7 +102,8 @@ function App() {
           const events = response.result.items
           console.log('EVENTS: ', events)
         })
-        
+        //
+
       })
     })
   }
