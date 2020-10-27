@@ -63,7 +63,8 @@ form button:hover{
     margin: 1rem;
     background: white;
     color: black;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 800;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,7 +174,7 @@ select{
 .event-btn {
     outline:0; 
     font-size:1em;
-    font-weight:525;
+    font-weight:600;
     background: whitesmoke;
     border:none;
     border-radius: 5px;

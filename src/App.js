@@ -144,7 +144,7 @@ function App() {
 
       <div className="event-wrapper">
         <div className="addEvent">
-        <button className="event-btn" onClick={handleClick}>Add Event</button>
+        <button className="event-btn" onClick={handleClick}>Click to Add an Event to Your Google Calendar!</button>
         </div>
       </div>
     </div>
