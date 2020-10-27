@@ -12,6 +12,11 @@ body{
     min-height: 100vh;
 }
 
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+
 header{
     font-size: 2.5rem;
 }
