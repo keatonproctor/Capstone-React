@@ -126,7 +126,6 @@ form button:hover{
 .completed {
     text-decoration: line-through rgb(249, 23, 23);
     text-decoration-style: double;
-    opacity: 50%;
     transition: all 0.6s ease;
 }
 
